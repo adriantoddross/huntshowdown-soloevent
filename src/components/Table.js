@@ -1,9 +1,11 @@
 import React from 'react';
-import leaderboard from './leaderboard.JSON';
+import leaderboard from '../leaderboard.json';
 
 export default function table(props) {
 
-// const players =
+  // const players = leaderboard.map((player) => {
+    
+  // });
 
   return (
     <table>
