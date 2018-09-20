@@ -5,7 +5,7 @@ export default function playerRow(props) {
   return (
     <tr className='player-row'>
       <td>{props.index + 1}</td>
-      <td>@{props.username}</td>
+      <td>{props.url ? <a href={props.url} target="_blank" rel="noopener noreferrer">{props.username}</a> : props.username}</td>
       <td>{props.missionsPlayed}</td>
       <td>${props.bounty}</td>
     </tr>
@@ -14,6 +14,7 @@ export default function playerRow(props) {
 
 playerRow.propTypes = {
   index: PropTypes.number,
+  url: PropTypes.string,
   username: PropTypes.string,
   missionsPlayed: PropTypes.number,
   bounty: PropTypes.number
