@@ -23,7 +23,7 @@ class leaderboardTable extends Component {
     // This looks confusing as an arrow function, so let's just declare it.
     const Row = function (index, rank, username, missionsPlayed, bounty) {
       return (
-        <tr key={username}>
+        <tr className='player-row' key={username}>
           <td>{index}</td>
           <td>{username}</td>
           <td>{missionsPlayed}</td>
@@ -35,7 +35,7 @@ class leaderboardTable extends Component {
     return (
       <table>
         <thead>
-          <tr>
+          <tr className='legend-row'>
             <th>Rank</th>
             <th>Username</th>
             <th>Missions Played</th>
