@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import leaderboard from '../leaderboard.json'; // imported leaderboard JSON data
-import PlayerRow from './playerRow';
+import PlayerRow from './PlayerRow.js';
 
 class leaderboardTable extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class leaderboardTable extends Component {
           </tr>
         </thead>
         <tbody>
-          {/* {playerRows} */}
+          {/* {PlayerRow} */}
         </tbody>
       </table>
     );
