@@ -1,4 +1,5 @@
 import React from 'React';
+import PropTypes from 'prop-types';
 
 export default function playerRow(props) {
   return (
@@ -11,3 +12,9 @@ export default function playerRow(props) {
   );
 }
 
+playerRow.propTypes = {
+  index: PropTypes.number,
+  username: PropTypes.string,
+  missionsPlayed: PropTypes.number,
+  bounty: PropTypes.number
+};
