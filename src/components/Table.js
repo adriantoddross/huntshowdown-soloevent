@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import leaderboard from '../leaderboard.json'; // imported leaderboard JSON data
+import PlayerRow from './playerRow';
 
 class leaderboardTable extends Component {
   constructor(props) {
@@ -8,29 +9,9 @@ class leaderboardTable extends Component {
   }
 
   render() {
-    const leaderboardData = this.state.data; // shorthand; way easier than typing this.state.data
-
-    const players = leaderboardData.map((player, index) => 
-      <tr key={player.username}>
-        <td>{index + 1}</td>
-        <td>{player.username}</td>
-        <td>{player.missionsPlayed}</td>
-        <td>{player.bounty}</td>
-      </tr>
-    );
-
-    // Now let's assemble the table. First we need a constructor function to create a row.
-    // This looks confusing as an arrow function, so let's just declare it.
-    const Row = function (index, rank, username, missionsPlayed, bounty) {
-      return (
-        <tr className='player-row' key={username}>
-          <td>{index}</td>
-          <td>{username}</td>
-          <td>{missionsPlayed}</td>
-          <td>{bounty}</td>
-        </tr>
-      );
-    };
+    // const leaderboardData = this.state.data;
+    // const playerRows = leaderboardData.map(player => 
+    //   <playerRow key={player.username} />);
 
     return (
       <table>
@@ -43,7 +24,7 @@ class leaderboardTable extends Component {
           </tr>
         </thead>
         <tbody>
-          {players}
+          {/* {playerRows} */}
         </tbody>
       </table>
     );
