@@ -10,13 +10,14 @@ class leaderboardTable extends Component {
 
   render() {
     const leaderboardData = this.state.data; // shorthand varoable for the leaderboard data!
+    const stringToNumber = (number) => parseInt(number, 10);
 
     const playerRows = leaderboardData.map((player, index) => 
       <PlayerRow key={player.username}
         url={player.url}
         index={index} 
         username={player.username}
-        missionsPlayed={player.missionsPlayed}
+        missionsPlayed={stringToNumber(player.missionsPlayed)}
         bounty={player.bounty}
       />);
 
