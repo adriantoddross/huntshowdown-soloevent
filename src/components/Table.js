@@ -5,13 +5,19 @@ import PlayerRow from './PlayerRow.js';
 class leaderboardTable extends Component {
   constructor(props) {
     super(props); 
-    this.state = {data: [leaderboard.data]}; // keep the leaderboard data to the state
+    this.state = {data: [...leaderboard.data]}; // ...spread operator to copy the leaderboard array into the state!
   }
 
   render() {
-    // const leaderboardData = this.state.data;
-    // const playerRows = leaderboardData.map(player => 
-    //   <playerRow key={player.username} />);
+    const leaderboardData = this.state.data; // shorthand varoable for the leaderboard data!
+
+    const playerRows = leaderboardData.map((player, index) => 
+      <PlayerRow key={player.username} 
+        index={index} 
+        username={player.username}
+        missionsPlayed={player.missionsPlayed}
+        bounty={player.bounty}
+      />);
 
     return (
       <table>
@@ -24,7 +30,7 @@ class leaderboardTable extends Component {
           </tr>
         </thead>
         <tbody>
-          {/* {PlayerRow} */}
+          {playerRows}
         </tbody>
       </table>
     );
