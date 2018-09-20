@@ -7,12 +7,12 @@ class leaderboardTable extends Component {
     super(props); 
     this.state = {data: [...leaderboard.data]}; // use spread operator to copy the leaderboard array into the state!
 
-    this.sortByUsername.bind(this);
+    this.sortByString.bind(this);
   }
 
-  sortByUsername() {
+  sortByString(key) {
     const copyOfState = [...this.state.data];
-    copyOfState.sort(function(a,b){ return a.username.localeCompare(b.username);});
+    copyOfState.sort(function(a,b){ return a[key].localeCompare(b[key]);});
     this.setState({data: copyOfState});
   }
 
@@ -34,7 +34,7 @@ class leaderboardTable extends Component {
         <thead>
           <tr className='legend-row'>
             <th>Rank</th>
-            <th onClick={() => this.sortByUsername()}>Username</th>
+            <th onClick={() => this.sortByString('username')}>Username</th>
             <th>Missions Played</th>
             <th>Bounty</th>
           </tr>
