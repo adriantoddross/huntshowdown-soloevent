@@ -1,11 +1,19 @@
 import React, {Component} from 'react';
 import leaderboard from '../leaderboard.json'; // import leaderboard JSON data
-import PlayerRow from './PlayerRow.js';
+import PlayerRow from './PlayerRow';
 
 class leaderboardTable extends Component {
   constructor(props) {
     super(props); 
     this.state = {data: [...leaderboard.data]}; // use spread operator to copy the leaderboard array into the state!
+
+    this.sortByUsername.bind(this);
+  }
+
+  sortByUsername() {
+    const copyOfState = [...this.state.data];
+    copyOfState.sort(function(a,b){ return a.username.localeCompare(b.username);});
+    this.setState({data: copyOfState});
   }
 
   render() {
@@ -26,7 +34,7 @@ class leaderboardTable extends Component {
         <thead>
           <tr className='legend-row'>
             <th>Rank</th>
-            <th>Username</th>
+            <th onClick={() => this.sortByUsername()}>Username</th>
             <th>Missions Played</th>
             <th>Bounty</th>
           </tr>
