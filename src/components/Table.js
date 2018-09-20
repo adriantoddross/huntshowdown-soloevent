@@ -18,7 +18,7 @@ class leaderboardTable extends Component {
 
   sortByNumber(num) {
     const copyOfState = [...this.state.data];
-    copyOfState.sort(function(a,b) {return a[num] - b[num];});
+    copyOfState.sort(function(a,b) {return b[num] - a[num];});
     this.setState({data: copyOfState});
   }
 
@@ -46,12 +46,9 @@ class leaderboardTable extends Component {
         <thead>
           <tr className='legend-row'>
             <th>Rank</th>
-            <th onClick={() => this.sortByString('username')}>Username
-            {/* <div>&#8679;</div>
-             <div>&#8681</div> */}
-            </th>
+            <th onClick={() => this.sortByString('username')}>Username</th>
             <th onClick={() => this.sortByNumber('missionsPlayed')}>Missions Played</th>
-            <th>Bounty</th>
+            <th onClick={() => this.sortByNumber('bounty')}>Bounty</th>
           </tr>
         </thead>
         <tbody>
