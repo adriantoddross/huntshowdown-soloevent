@@ -7,7 +7,7 @@ export default function playerRow(props) {
       <td>{props.index + 1}</td>
       <td>{props.url ? <a href={props.url} target="_blank" rel="noopener noreferrer">{props.username}</a> : props.username}</td>
       <td>{props.missionsPlayed}</td>
-      <td>${props.bounty}</td>
+      <td>${props.bounty.toLocaleString()}</td>
     </tr>
   );
 }
