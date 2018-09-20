@@ -1,15 +1,16 @@
 import React, {Component} from 'react';
-import leaderboard from '../leaderboard.json';
+import leaderboard from '../leaderboard.json'; // imported leaderboard JSON data
 
 class leaderboardTable extends Component {
   constructor(props) {
     super(props); 
-    this.state = {data: [leaderboard.data]};
+    this.state = {data: [leaderboard.data]}; // keep the leaderboard data to the state
   }
 
   render() {
+    const leaderboardData = this.state.data; // shorthand; way easier than typing this.state.data
 
-    const players = leaderboard.data.map((player, index) => 
+    const players = leaderboardData.map((player, index) => 
       <tr key={player.username}>
         <td>{index + 1}</td>
         <td>{player.username}</td>
@@ -17,6 +18,8 @@ class leaderboardTable extends Component {
         <td>{player.bounty}</td>
       </tr>
     );
+
+    // Now let's assemble the table.
 
     return (
       <table>
