@@ -3,9 +3,9 @@ import leaderboard from '../leaderboard.json';
 
 export default function table() {
 
-  const players = leaderboard.data.map((player) => 
+  const players = leaderboard.data.map((player, index) => 
     <tr key={player.username}>
-      <td></td>
+      <td>{index + 1}</td>
       <td>{player.username}</td>
       <td>{player.missionsPlayed}</td>
       <td>{player.bounty}</td>
