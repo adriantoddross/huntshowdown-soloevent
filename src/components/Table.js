@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import leaderboard from '../leaderboard.json';
 
 class leaderboardTable extends Component {
+  constructor(props) {
+    super(props); 
+    this.state = {data: [leaderboard.data]};
+  }
 
   render() {
 
