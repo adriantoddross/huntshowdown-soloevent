@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import leaderboard from '../leaderboard.json'; // imported leaderboard JSON data
+import leaderboard from '../leaderboard.json'; // import leaderboard JSON data
 import PlayerRow from './PlayerRow.js';
 
 class leaderboardTable extends Component {
   constructor(props) {
     super(props); 
-    this.state = {data: [...leaderboard.data]}; // ...spread operator to copy the leaderboard array into the state!
+    this.state = {data: [...leaderboard.data]}; // use spread operator to copy the leaderboard array into the state!
   }
 
   render() {
