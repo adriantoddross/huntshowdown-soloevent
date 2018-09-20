@@ -6,4 +6,4 @@ I play *a lot* of [Hunt: Showdown](https://www.huntshowdown.com/) and they recen
 - I couldn't sort by username, missions played, or figure out stuff like who made the most bounty with the fewest missions played
 - I felt like the data could have been presented in a more interesting, nuanced way
 
-After applying to [Elastic](https://www.elastic.co/), I wanted to create a project based on [data visualization](https://www.elastic.co/blog/color-coded-visualizations-react). I expect to be finished up within a few days!
+After applying to [Elastic](https://www.elastic.co/), I wanted to create a project based on [data visualization](https://www.elastic.co/blog/color-coded-visualizations-react) with clean, accessible UI & UX.
