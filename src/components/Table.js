@@ -19,7 +19,18 @@ class leaderboardTable extends Component {
       </tr>
     );
 
-    // Now let's assemble the table.
+    // Now let's assemble the table. First we need a constructor function to create a row.
+    // This looks confusing as an arrow function, so let's just declare it.
+    const Row = function (index, rank, username, missionsPlayed, bounty) {
+      return (
+        <tr key={username}>
+          <td>{index}</td>
+          <td>{username}</td>
+          <td>{missionsPlayed}</td>
+          <td>{bounty}</td>
+        </tr>
+      );
+    };
 
     return (
       <table>
@@ -37,6 +48,6 @@ class leaderboardTable extends Component {
       </table>
     );
   }
-  }
+}
   
 export default leaderboardTable;
