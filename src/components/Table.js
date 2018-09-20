@@ -12,7 +12,8 @@ class leaderboardTable extends Component {
     const leaderboardData = this.state.data; // shorthand varoable for the leaderboard data!
 
     const playerRows = leaderboardData.map((player, index) => 
-      <PlayerRow key={player.username} 
+      <PlayerRow key={player.username}
+        url={player.url}
         index={index} 
         username={player.username}
         missionsPlayed={player.missionsPlayed}
