@@ -37,9 +37,9 @@ class leaderboardTable extends Component {
       />);
 
     return (
-      <table>
-        <thead>
-          <tr className='legend-row'>
+      <table className='table'>
+        <thead className='table-header'>
+          <tr className='table-legend'>
             <th>Rank</th>
             <th onClick={() => this.sortByString('username')}>Username</th>
             <th onClick={() => this.sortByNumber('missionsPlayed')}>Missions Played</th>
