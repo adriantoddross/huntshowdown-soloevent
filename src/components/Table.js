@@ -8,12 +8,7 @@ class leaderboardTable extends Component {
     this.state = {data: [...leaderboard.data]}; // use spread operator to copy the leaderboard array into the state!
 
     this.sortByString.bind(this);
-    this.sortNumber.bind(this);
     this.sortByNumber.bind(this);
-  }
-
-  sortNumber(a,b) {
-    return a - b;
   }
 
   sortByNumber(num) {
