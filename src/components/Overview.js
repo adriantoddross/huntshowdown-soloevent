@@ -14,8 +14,16 @@ export default function preview() {
   const sumOfMissionsPlayed = sum('missionsPlayed', leaderboardData);
   const averageMissionsPlayed = sumOfMissionsPlayed / leaderboardData.length;
 
+  const mostBountyPerMission = () => {
+    let copyOfState = leaderboardData;
+    copyOfState.sort(function(a,b) {return a['missionsPlayed'] / a['bounty'] > b['missionsPlayed'] / b['bounty'];});
+    return copyOfState[0].username;
+  };
+
 
   const average = sum / leaderboardData.length; 
+
+  console.log(mostBountyPerMission());
 
   return (
     <div>
@@ -24,6 +32,7 @@ export default function preview() {
 
       <p>Total missions completed: {Math.ceil(sumOfMissionsPlayed)}</p>
       <p>Average missions per player: {Math.ceil(averageMissionsPlayed)}</p>
+
     </div>
   );
 }
