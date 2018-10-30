@@ -1,21 +1,21 @@
 import React from 'react';
-import leaderboard from '../leaderboard.json'; // import leaderboard JSON data
+import PropTypes from 'prop-types';
 
-
-export default function preview() {
-  const leaderboardData = leaderboard.data; // shorthand variable for the leaderboard data!
+export default function Preview(props) {
+  const stats = [...props.stats]; // shorthand variable for the leaderboard data!
+  
 
   // Let's use a helper function to get the sum of whatever key/value pair we're looking for using .reduce.
   const sum = (key, array) => array.reduce(function (acc, obj) { return acc + parseInt(obj[key], 10); }, 0);
 
-  const sumOfBounties = sum('bounty', leaderboardData); // we use our helper function for the sum
-  const averageBounty = sumOfBounties / leaderboardData.length; // the average is the sum divided by the count
+  const sumOfBounties = sum('bounty', stats); // we use our helper function for the sum
+  const averageBounty = sumOfBounties / stats.length; // the average is the sum divided by the count
 
-  const sumOfMissionsPlayed = sum('missionsPlayed', leaderboardData);
-  const averageMissionsPlayed = sumOfMissionsPlayed / leaderboardData.length;
+  const sumOfMissionsPlayed = sum('missionsPlayed', stats);
+  const averageMissionsPlayed = sumOfMissionsPlayed / stats.length;
 
   const mostBountyPerMission = () => {
-    let copyOfData = leaderboardData.slice();
+    let copyOfData = stats.slice();
     copyOfData.sort(function(a,b) {return a['missionsPlayed'] / a['bounty'] > b['missionsPlayed'] / b['bounty'];});
     return copyOfData[0];
   };
@@ -33,3 +33,7 @@ export default function preview() {
     </div>
   );
 }
+
+Preview.propTypes = {
+  stats: PropTypes.array
+};
