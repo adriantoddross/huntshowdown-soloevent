@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import PlayerRow from './PlayerRow';
 
 class leaderboardTable extends Component {
@@ -33,5 +34,12 @@ class leaderboardTable extends Component {
     );
   }
 }
+
+leaderboardTable.propTypes = {
+  stats: PropTypes.array,
+  sortByUsername: PropTypes.func,
+  sortByMissionsPlayed: PropTypes.func,
+  sortByBounty: PropTypes.func
+};
   
 export default leaderboardTable;
