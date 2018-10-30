@@ -1,30 +1,28 @@
 import React, {Component} from 'react';
-import leaderboard from '../leaderboard.json'; // import leaderboard JSON data
 import PlayerRow from './PlayerRow';
 
 class leaderboardTable extends Component {
   constructor(props) {
     super(props); 
-    this.state = {data: [...leaderboard.data]}; // use spread operator to copy the leaderboard array into the state!
 
     this.sortByString.bind(this);
     this.sortByNumber.bind(this);
   }
 
   sortByNumber(num) {
-    const copyOfState = [...this.state.data];
+    const copyOfState = [...this.props.stats];
     copyOfState.sort(function(a,b) {return b[num] - a[num];});
     this.setState({data: copyOfState});
   }
 
   sortByString(key) {
-    const copyOfState = [...this.state.data];
+    const copyOfState = [...this.props.stats];
     copyOfState.sort(function(a,b) {return a[key].localeCompare(b[key]);});
     this.setState({data: copyOfState});
   }
 
   render() {
-    const leaderboardData = this.state.data; // shorthand varoable for the leaderboard data!
+    const leaderboardData = this.props.stats; // shorthand variable for the leaderboard data!
     const stringToNumber = (number) => parseInt(number, 10);
 
     const playerRows = leaderboardData.map((player, index) => 
