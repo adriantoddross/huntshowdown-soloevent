@@ -20,8 +20,6 @@ export default function preview() {
     return copyOfData[0];
   };
 
-  console.log(mostBountyPerMission());
-
   return (
     <div>
       <p>Total bounty amassed by all players: ${sumOfBounties.toLocaleString()}</p>
