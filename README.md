@@ -13,7 +13,14 @@ After applying to [Elastic](https://www.elastic.co/), I wanted to create a proje
 ## Lessons learned so far
 
 ### 1. Fending off mutiny
-I learned how to code using functional programming, so keeping my functions and variables immutable are things I obsess over. When copying the state, I use Object.assign(), and when referring to the array of player stats, I always make a copy, which might not be necessary, but doesn't hurt anything!
+I learned how to code using functional programming, so keeping my functions and variables immutable is something I obsess over. When referring to the state or player stats, I use Object.assign() I always make a copy, not a reference.
 
-### 2. Getting comfortble with the Array sort() method
-The .sort method is simple and powerful. In this project, I've done my best to use it appropriately and sparingly in the table that shows player data.
+### 2. Reinforcing my understanding of array methjods
+The .sort method is simple and powerful. In this project, all columns in the table can be sorted and one of tidbits displayed in the Overview component uses the sort method too! I also finally had a real opportunity to use array .reduce:
+
+``` js
+ // Let's use a helper function to get the sum of whatever key/value pair we're looking for using .reduce.
+  const sum = (key, array) => array.reduce(function (acc, obj) { return acc + parseInt(obj[key], 10); }, 0);
+
+  const sumOfBounties = sum('bounty', stats); // we use our helper function for the sum
+```
