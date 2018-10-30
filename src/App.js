@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div>
         <Overview/>
-        <Table/>
+        <Table stats={this.state.data}/>
       </div>
     );
   }
