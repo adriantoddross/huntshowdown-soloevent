@@ -30,7 +30,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Overview/>
+        <Overview
+          stats={this.state.data}
+        />
         <Table 
           stats={this.state.data}
           sortByUsername={this.sortByString}
