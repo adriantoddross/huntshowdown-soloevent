@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Leaderboard from './leaderboard.json'; // import leaderboard JSON data
+import Navbar from './components/Navbar';
 import Overview from './components/Overview';
 import Table from './components/Table';
 
@@ -30,14 +31,22 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Overview
-          stats={this.state.data}
-        />
-        <Table 
-          stats={this.state.data}
-          sortByUsername={this.sortByString}
-          sortByMissionsPlayed={this.sortByNumber}
-          sortByBounty={this.sortByNumber}/>
+        <header>
+          <Navbar/>
+        </header>
+        <body>
+          <Overview
+            stats={this.state.data}
+          />
+          <Table 
+            stats={this.state.data}
+            sortByUsername={this.sortByString}
+            sortByMissionsPlayed={this.sortByNumber}
+            sortByBounty={this.sortByNumber}
+          />  
+        </body>
+        {/* <footer></footer> */}
+        
       </div>
     );
   }
