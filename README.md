@@ -15,7 +15,7 @@ After applying to [Elastic](https://www.elastic.co/), I wanted to create a proje
 ### 1. Fending off mutiny
 I learned how to code using functional programming, so keeping my functions and variables immutable is something I obsess over. When referring to the state or player stats, I use Object.assign() I always make a copy, not a reference.
 
-### 2. Reinforcing my understanding of array methjods
+### 2. Reinforcing my understanding of array methods
 The .sort method is simple and powerful. In this project, all columns in the table can be sorted and one of tidbits displayed in the Overview component uses the sort method too! I also finally had a real opportunity to use array .reduce:
 
 ``` js
