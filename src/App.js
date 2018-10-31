@@ -5,6 +5,7 @@ import Leaderboard from './leaderboard.json'; // import leaderboard JSON data
 import Navbar from './components/Navbar';
 import Overview from './components/Overview';
 import Table from './components/Table';
+import Footer from './components/Footer';
 
 class App extends Component {
 
@@ -45,8 +46,7 @@ class App extends Component {
             sortByBounty={this.sortByNumber}
           />  
         </body>
-        {/* <footer></footer> */}
-        
+        <Footer/>
       </div>
     );
   }
