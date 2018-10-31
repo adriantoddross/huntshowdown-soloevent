@@ -16,7 +16,7 @@ After applying to [Elastic](https://www.elastic.co/), I wanted to create a proje
 I learned how to code using functional programming, so keeping my functions and variables immutable is something I obsess over. When referring to the state or player stats, I use Object.assign() I always make a copy, not a reference.
 
 ### 2. Reinforcing my understanding of array methods
-The .sort method is simple and powerful. In this project, all columns in the table can be sorted and one of tidbits displayed in the Overview component uses the sort method too! I also finally had a real opportunity to use array .reduce:
+The *.sort method* is simple and powerful. In this project, all columns in the table can be sorted and one of tidbits displayed in the Overview component uses the sort method too! I also had an appropriate opportunity to use *array .reduce*:
 
 ``` js
  // Let's use a helper function to get the sum of whatever key/value pair we're looking for using .reduce.
