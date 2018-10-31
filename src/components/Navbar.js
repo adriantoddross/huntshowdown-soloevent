@@ -5,9 +5,12 @@ export default function Navbar(){
     <nav>
       <img src="" alt=""/>
       <ul>
-        <li>About</li>
-        <li>Learn About Hunt: Showdown</li>
-        {/* <li></li> */}
+        <li>
+          <a href="https://github.com/adriantoddross/huntshowdown-soloevent" target="_blank" rel="noopener noreferrer">About</a>
+        </li>
+        <li>
+          <a href="https://www.huntshowdown.com/" target="_blank" rel="noopener noreferrer">What is Hunt: Showdown?</a>
+        </li>
       </ul>
     </nav>
   );
