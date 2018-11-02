@@ -47,9 +47,17 @@
     padding: 5%;
   }
 
+  .navbar-item:nth-child(2) {
+    padding-left: 100px;
+  }
+
   .navbar-item {
     align-self: center;
-    flex: 1;
+    flex: initial;
+  }
+
+  .navbar-img {
+    max-width: 100%;
   }
 
 }
