@@ -1,5 +1,6 @@
 .navbar {
   background-color: #0c1013;
+  min-height: 325px;
 }
 
 .navbar-list {
@@ -7,31 +8,48 @@
   display: flex;
   flex-flow: row wrap;
   list-style-type: none;
-  justify-content: center;
   padding: 10%;
+  min-height: 300px;
 }
 
 .navbar-img {
-  max-width: 20%;
+  max-width: 30%;
   height: auto;
 }
 
 .navbar-item {
   flex: 1 100%;
-  padding: 10px;
+  padding: 15px;
 }
 
-.navbar-item a {
+.navbar-link {
   color: #dae2e4;
+  display:inline-block;
   font-weight: bold;
   font-size: 16px;
   letter-spacing: 6px;
   text-decoration: none;
   text-transform: uppercase;
+  transition: color 200ms ease;
 }
 
-.navbar-item a:hover {
+.navbar-link:hover {
   color: #d7232d;
 }
 
-/* @media only screen and (min-width: 768px) {} */
+@media only screen and (min-width: 1024px) {
+  .navbar {
+    min-height: 125px;
+  }
+
+  .navbar-list {
+    min-height: 100px;
+    padding: 5%;
+  }
+
+  .navbar-item {
+    align-self: center;
+    flex: 1;
+  }
+
+}
