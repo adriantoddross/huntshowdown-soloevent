@@ -11,10 +11,10 @@ export default function Navbar(){
           </a>
         </li>
         <li className='navbar-item'>
-          <a href="https://github.com/adriantoddross/huntshowdown-soloevent" target="_blank" rel="noopener noreferrer">About</a>
+          <a className='navbar-link' href="https://github.com/adriantoddross/huntshowdown-soloevent" target="_blank" rel="noopener noreferrer">About</a>
         </li>
         <li className='navbar-item'>
-          <a href="https://www.huntshowdown.com/" target="_blank" rel="noopener noreferrer">What is Hunt: Showdown?</a>
+          <a className='navbar-link'href="https://www.huntshowdown.com/" target="_blank" rel="noopener noreferrer">What is Hunt: Showdown?</a>
         </li>
       </ul>
     </nav>
