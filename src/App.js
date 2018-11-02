@@ -32,20 +32,16 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header>
-          <Navbar/>
-        </header>
-        <body>
-          <Overview
-            stats={this.state.data}
-          />
-          <Table 
-            stats={this.state.data}
-            sortByUsername={this.sortByString}
-            sortByMissionsPlayed={this.sortByNumber}
-            sortByBounty={this.sortByNumber}
-          />  
-        </body>
+        <Navbar/>
+        <Overview
+          stats={this.state.data}
+        />
+        <Table 
+          stats={this.state.data}
+          sortByUsername={this.sortByString}
+          sortByMissionsPlayed={this.sortByNumber}
+          sortByBounty={this.sortByNumber}
+        />
         <Footer/>
       </div>
     );
