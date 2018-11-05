@@ -29,6 +29,14 @@ class Summary extends Component {
   render() {
     return (
       <body>
+        <header>
+          <div className='hero-image'>
+            <header className='hero-banner'>
+              <h1 className='hero-header'>Hunt: Showdown's first ever live event started on August 30, 2018.</h1>
+              <p className='hero-text'>During this one-week event, hunters trudged and fought their way through the swamps to earn as much money as possible, competing with up to 10 players in free-for-all solo matches.</p>
+            </header>
+          </div>
+        </header>
         <Overview
           stats={this.state.data}
         />
