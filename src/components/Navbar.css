@@ -13,7 +13,7 @@
 }
 
 .navbar-img {
-  max-width: 30%;
+  max-width: 20%;
   height: auto;
 }
 
@@ -39,12 +39,13 @@
 
 @media only screen and (min-width: 1024px) {
   .navbar {
-    min-height: 125px;
+    min-height: 75px;
   }
 
   .navbar-list {
-    min-height: 100px;
-    padding: 5%;
+    min-height: 50px;
+    height: 60px;
+    padding: 25px;
   }
 
   .navbar-item:nth-child(2) {
@@ -57,7 +58,7 @@
   }
 
   .navbar-img {
-    max-width: 100%;
+    max-width: 50%;
   }
 
 }
