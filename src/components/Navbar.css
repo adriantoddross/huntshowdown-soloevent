@@ -1,6 +1,5 @@
 .navbar {
   background-color: #0c1013;
-  min-height: 325px;
 }
 
 .navbar-list {
@@ -9,7 +8,7 @@
   flex-flow: row wrap;
   list-style-type: none;
   padding: 10%;
-  min-height: 300px;
+  min-height: 250px;
 }
 
 .navbar-img {
@@ -38,9 +37,6 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .navbar {
-    min-height: 75px;
-  }
 
   .navbar-list {
     min-height: 50px;
